@@ -1,0 +1,35 @@
+{
+  "name": "proteinScraper",
+  "version": "0.1.2",
+  "description": "A simple node package scraping a web page and spitting the results in a CSV file.",
+  "author": {
+    "name": "PR",
+    "email": "fphaedra.a.r@gmail.com"
+  },
+  "dependencies": {
+    "jsdom": "0.2.x",
+    "ya-csv": "0.9.x",
+    "request": "2.x.x"
+  },  
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/fallanic/scrape2csv/blob/master/MIT-LICENSE.md"
+    }
+  ],  
+  "keywords": [
+    "scrape",
+    "website",
+    "csv",
+    "file",
+    "spreadsheet",
+    "excel",
+    "scraper",
+    "scraping",
+    "jquery",
+    "css",
+    "selector",
+    "export"
+  ],
+  "engine": "node >= 0.4.1"
+}
