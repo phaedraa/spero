@@ -34,10 +34,17 @@ var searchAndScrape = (terms, foodCateogry, dataCategory) => {
 
     var $ = cheerio.load(body);
     var data = [];
-    $('div#siteTable > div.link').each(index => {
-      var title = $(this).find('p.title > a.title').text().trim();
-      var score = $(this).find('div.score.unvoted').text().trim();
-      var user = $(this).find('a.author').text().trim();
+    //console.log('children', $('div#gs_res_ccl_mid').children().length);
+    $('gs_res_ccl_mid').filter(() => {
+      //console.log('this child', child, index);
+      //var title = $(this).find('div.div.h3').text().trim();
+      //console.log('title', title);
+      var data = $(this);
+      data.children().each(child => {
+        console.log('here');
+      });
+      //var score = $(this).find('div.score.unvoted').text().trim();
+      //var user = $(this).find('a.author').text().trim();
       data.push([title, score, user]);
     });
     scrapeToCSV.write('test.csv', ['title', 'score', 'user'], data);
